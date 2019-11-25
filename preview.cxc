@@ -1,0 +1,35 @@
+#
+#  Script to prepare colormap preview using ChimeraX
+#  Loading and positioning structures done by hand
+#
+#  Run with `open preview.cxc format cmd`
+# 
+#  Author: Shyam Saladi
+#  Date: Nov 2019
+#
+#
+
+camera ortho
+preset "overall look" publication
+
+runscript viridis_colormaps.py
+
+# open /Users/saladi/github/chimerax_viridis/1rh5.pdb1.gz
+
+open preview.cxs format session
+
+# Color from N- to C-terminus
+rainbow #1/A palette rainbow
+rainbow #2/A palette turbo
+rainbow #3/A palette viridis
+
+color #1,2,3/B,C magenta
+
+# Color by property (B-factor)
+color bfactor #4 palette rainbow
+color bfactor #5
+color bfactor #6 palette viridis
+
+save session preview.cxs
+
+echo Script finished. Take screenshot
