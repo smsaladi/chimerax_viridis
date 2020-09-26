@@ -1,5 +1,7 @@
-README
-======
+[![DOI](https://data.caltech.edu/badge/223877773.svg)](https://data.caltech.edu/badge/latestdoi/223877773)
+
+chimerax_viridis
+================
 
 Script to add viridis and other colorblind-accessible
 (and perceptually uniform) palettes to ChimeraX.
